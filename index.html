@@ -8,22 +8,19 @@ body{
     background-color:#DDD;
 }
 
-  .mobileShow {display: none;}
+@media screen and (min-width: 769px) {
 
-  /* Smartphone Portrait and Landscape */
-  @media only screen
-    and (min-device-width : 320px)
-    and (max-device-width : 480px){ 
-      .mobileShow {display: inline;}
-  }
-  .mobileHide { display: inline; }
+    #div-mobile { display: none; }
+    #div-desktop { display: block; }
 
-  /* Smartphone Portrait and Landscape */
-  @media only screen
-    and (min-device-width : 320px)
-    and (max-device-width : 480px){
-     .mobileHide { display: none;}
-  }
+}
+
+@media screen and (max-width: 768px) {
+
+    #div-mobile { display: block; }
+    #div-desktop { display: none; }
+
+}
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </style>
@@ -33,13 +30,13 @@ body{
 
 <body>
 
-<div class="mobileHide"> 
+<div class="div-mobile div-desktop"> 
 <object data="https://spiderbook-kkent.github.io/Spider-Book/Book/SpiderBook.pdf" type="application/pdf" width="100%" height="100%" >
     <embed src="https://spiderbook-kkent.github.io/Spider-Book/Book/SpiderBook.pdf">  </embed>
 </object>
 </div> 
 
-<div class=”mobileShow”>
+<div class=”div-mobile div-desktop”>
 
         <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://spiderbook-kkent.github.io/Spider-Book/Book/SpiderBook.pdf">Download PDF</a>.</p>
   
@@ -49,5 +46,4 @@ body{
 
 </body>
 </html>
-
 
