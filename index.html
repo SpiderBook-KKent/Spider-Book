@@ -19,16 +19,6 @@
      .mobileHide { display: none;}
   }
 
-  .PcShow {display: none;}
-  @media screen and (min-width: 400px) {
-	.PcShow{display: inline;}
-}
-
-  .PcHide {display: inline;}
-  @media screen and (max-width:500px){
-	.PcHide{display: none;}
-}
-
 body{
     width:100%;
     height:100%;
@@ -41,13 +31,13 @@ body{
 
 <body>
 
-<div class="mobileHide PcShow"> 
+<div class="mobileHide"> 
 <object data="https://spiderbook-kkent.github.io/Spider-Book/Book/SpiderBook.pdf" type="application/pdf" width="100%" height="100%" >
     <embed src="https://spiderbook-kkent.github.io/Spider-Book/Book/SpiderBook.pdf">  </embed>
 </object>
 </div> 
 
-<div class=”mobileShow PcHide”>
+<div class=”mobileShow”>
 
         <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://spiderbook-kkent.github.io/Spider-Book/Book/SpiderBook.pdf">Download PDF</a>.</p>
   
